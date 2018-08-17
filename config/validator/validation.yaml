@@ -1,0 +1,39 @@
+App\Entity\Roles:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: string
+App\Entity\Permissions:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: string
+
+App\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: username
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        username:
+            - NotBlank: ~
+            - Type: string
+        email:
+            - NotBlank: ~
+            - Type: string
+
+App\Entity\UsersRoles:
+    properties:
+        user:
+            - NotNull: ~
+        role:
+            - NotNull: ~
+App\Entity\RolesPermissions:
+    properties:
+        role:
+            - NotNull: ~
+        permission:
+            - NotNull: ~

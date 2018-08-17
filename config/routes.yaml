@@ -1,0 +1,17 @@
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_oauth_server_authorize:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+Demo_controller:
+    type:     rest
+    resource: App\Controller\DemoController
+
+
+simple_things_entity_audit:
+    resource: "@SimpleThingsEntityAuditBundle/Resources/config/routing.yml"
+    prefix: /audit

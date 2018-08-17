@@ -1,0 +1,9 @@
+simple_things_entity_audit:
+    audited_entities:
+      - App\Entity\Roles
+      - App\Entity\User
+      - App\Entity\Permissions
+      - App\Entity\UsersRoles
+      - App\Entity\RolesPermissions
+    service:
+        username_callable: simplethings_entityaudit.username_callable.token_storage
